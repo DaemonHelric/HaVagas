@@ -1,19 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/et_nome_completo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome Completo"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"/>
+
+            <CheckBox
+                android:id="@+id/cb_receber_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deseja receber atualizações de oportunidades?"/>
+
+            <EditText
+                android:id="@+id/et_telefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefone"
+                android:inputType="phone"/>
+
+            <RadioGroup
+                android:id="@+id/rg_tipo_telefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rb_comercial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comercial"/>
+                <RadioButton
+                    android:id="@+id/rb_residencial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Residencial"/>
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/cb_adicionar_celular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adicionar celular"/>
+            
+            <EditText
+                android:id="@+id/et_celular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefone celular"
+                android:inputType="phone"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:id="@+id/sp_sexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/sexo"/>
+
+            <EditText
+                android:id="@+id/et_data_nascimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data de Nascimento"
+                android:inputType="date"/>
+
+            <Spinner
+                android:id="@+id/sp_formacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/formacao"/>
+
+            <EditText
+                android:id="@+id/et_ano_formatura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ano de Formatura"
+                android:inputType="number"
+                android:visibility="gone"/>
+            
+            <EditText
+                android:id="@+id/et_ano_conclusao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ano de conclusão"
+                android:inputType="number"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_instituicao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Instituição"
+                android:inputType="textPersonName"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_titulo_monografia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Titulo da monografia"
+                android:inputType="text"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_orientador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Orientador"
+                android:inputType="textPersonName"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_vagas_interesse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Vagas de interesse"
+                android:inputType="textMultiLine"/>
+
+            <Button
+                android:id="@+id/btn_salvar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salvar"/>
+
+            <Button
+                android:id="@+id/btn_limpar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpar"/>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
