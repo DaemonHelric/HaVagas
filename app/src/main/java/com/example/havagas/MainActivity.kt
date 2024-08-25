@@ -8,6 +8,7 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
@@ -120,11 +121,14 @@ class MainActivity : AppCompatActivity() {
             }
             msg.append("Vagas de interesse: $vagasInteresse")
 
-            AlertDialog.Builder(this)
-                .setTitle("Dados do cadastro")
-                .setMessage(msg.toString())
-                .setPositiveButton("Yeah", null)
-                .show()
+            Toast.makeText(this, msg.toString(), Toast.LENGTH_SHORT).show()
+
+            //meu antigo apresentador de dados
+//            AlertDialog.Builder(this)
+//                .setTitle("Dados do cadastro")
+//                .setMessage(msg.toString())
+//                .setPositiveButton("Yeah", null)
+//                .show()
         }
 
         //Outro Butão
