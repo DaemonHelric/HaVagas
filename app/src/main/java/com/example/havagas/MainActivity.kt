@@ -121,14 +121,11 @@ class MainActivity : AppCompatActivity() {
             }
             msg.append("Vagas de interesse: $vagasInteresse")
 
-            Toast.makeText(this, msg.toString(), Toast.LENGTH_SHORT).show()
-
-            //meu antigo apresentador de dados
-//            AlertDialog.Builder(this)
-//                .setTitle("Dados do cadastro")
-//                .setMessage(msg.toString())
-//                .setPositiveButton("Yeah", null)
-//                .show()
+            AlertDialog.Builder(this)
+                .setTitle("Dados do cadastro")
+                .setMessage(msg.toString())
+                .setPositiveButton("Yeah", null)
+                .show()
         }
 
         //Outro Butão
